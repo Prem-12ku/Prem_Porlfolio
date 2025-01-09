@@ -6,45 +6,121 @@
   <title>Prem Kumar S - Resume</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0;
       line-height: 1.6;
-      background-color: #f4f4f9;
+      background: linear-gradient(to bottom, #028fa3, #eef2f3);
+      color: #333;
+      overflow-x: hidden;
     }
     h1, h2 {
-      color: #333;
+      color: #028fa3;
     }
     .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-in-out;
     }
-    .section {
+    .header {
+      text-align: center;
       margin-bottom: 20px;
     }
+    .header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    .header p {
+      font-size: 1.2em;
+      margin: 0;
+      color: #555;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
     .section h2 {
-      border-bottom: 2px solid #028fa3;
-      display: inline-block;
-      padding-bottom: 5px;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border-left: 5px solid #028fa3;
+      padding-left: 10px;
     }
     ul {
-      list-style: square;
-      padding-left: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      color: #555;
+    }
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #028fa3;
+      font-size: 1.2em;
+    }
+    .contact p a {
+      color: #028fa3;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact p a:hover {
+      color: #005b6b;
+    }
+    .fadeIn {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .header h1 {
+      animation: float 3s infinite ease-in-out;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background: #028fa3;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .button:hover {
+      background: #005b6b;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Prem Kumar S</h1>
-    <p><strong>Software Developer</strong></p>
-    <p><strong>Location:</strong> Bangalore, India</p>
-    <p><strong>Email:</strong> <a href="mailto:allinprem@gmail.com">allinprem@gmail.com</a></p>
-    <p><strong>Phone:</strong> +91 8310271904</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prem-kumars-085b33247">linkedin.com/in/prem-kumars-085b33247</a></p>
+  <div class="container fadeIn">
+    <div class="header">
+      <h1>Prem Kumar S</h1>
+      <p><strong>Software Developer</strong></p>
+      <p>Bangalore, India</p>
+    </div>
+    <div class="contact">
+      <p><strong>Email:</strong> <a href="mailto:allinprem@gmail.com">allinprem@gmail.com</a></p>
+      <p><strong>Phone:</strong> +91 8310271904</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/prem-kumars-085b33247" target="_blank">linkedin.com/in/prem-kumars-085b33247</a></p>
+    </div>
 
     <div class="section">
       <h2>Summary</h2>
@@ -85,6 +161,8 @@
         <li>Enhanced user retention by <strong>15%</strong> via Google Analytics.</li>
       </ul>
     </div>
+
+    <a href="mailto:allinprem@gmail.com" class="button">Contact Me</a>
   </div>
 </body>
 </html>
